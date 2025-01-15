@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label'
 import React, { useActionState } from 'react'
 
 async function signInAction(prevState: {error: string} | null, formData: FormData) {
-    await signIn(prevState, formData);
+    return await signIn(prevState, formData);
 }
 export default function Login() {
     const [state, formAction] = useActionState(signInAction, null);
